@@ -33,16 +33,17 @@ namespace MouseMover
             {
                 //Cursor.Clip = new Rectangle(this.Location, this.Size);
 
-                int pos = (int)numericUpDown2.Value;
+                int posX = (int)numericUpDown2.Value;
+                int posY = (int)numericUpDown3.Value;
 
                 if (temp==true)
                 {
-                    Cursor.Position = new Point(Cursor.Position.X - pos, Cursor.Position.Y - pos);
+                    Cursor.Position = new Point(Cursor.Position.X - posX, Cursor.Position.Y - posY);
                     temp = false;
                 }
                 else
                 {
-                    Cursor.Position = new Point(Cursor.Position.X + pos, Cursor.Position.Y + pos);
+                    Cursor.Position = new Point(Cursor.Position.X + posX, Cursor.Position.Y + posY);
                     temp = true;
                 }
             }
